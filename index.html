@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oteroz Company</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #232f3e;
+            padding: 1rem;
+            color: white;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Agregado: estilo para el logo imagen */
+        .logo img {
+            max-height: 40px;
+            vertical-align: middle;
+        }
+
+        .search-bar {
+            flex: 1;
+            display: flex;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .search-bar button {
+            padding: 0.5rem 1rem;
+            background: #ff9900;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .cart-icon {
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        /* Categories */
+        .categories {
+            background-color: #37475a;
+            padding: 0.5rem;
+            color: white;
+        }
+
+        .categories ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .categories a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .featured {
+            background: #eaeded;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .price {
+            color: #B12704;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .add-to-cart {
+            background: #ffd814;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: #232f3e;
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #DDD;
+            text-decoration: none;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+            }
+            
+            .search-bar {
+                width: 100%;
+            }
+
+            .categories ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">
+                <!-- Reemplaza la ruta '/ruta-a-tu-logo.png' con la ruta real de tu logo -->
+                <img src="/api/placeholder/120/40" alt="Oteroz Company Logo"> 
+                Oteroz Company
+            </a>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Categories -->
+    <div class="categories">
+        <ul>
+            <li><a href="#">Electrónica</a></li>
+            <li><a href="#">Ropa</a></li>
+            <li><a href="#">Hogar</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Libros</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="featured">
+            <h2>Productos Destacados de Oteroz Company</h2>
+        </section>
+
+        <section class="products-grid">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <!-- Reemplaza '/ruta-a-tu-imagen1.jpg' con la ruta real de tu imagen -->
+                    <img src="/api/placeholder/150/150" alt="Producto 1">
+                </div>
+                <h3>Producto 1</h3>
+                <p class="price">$99.99</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <!-- Reemplaza '/ruta-a-tu-imagen2.jpg' con la ruta real de tu imagen -->
+                    <img src="/api/placeholder/150/150" alt="Producto 2">
+                </div>
+                <h3>Producto 2</h3>
+                <p class="price">$149.99</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <!-- Reemplaza '/ruta-a-tu-imagen3.jpg' con la ruta real de tu imagen -->
+                    <img src="/api/placeholder/150/150" alt="Producto 3">
+                </div>
+                <h3>Producto 3</h3>
+                <p class="price">$199.99</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <!-- Producto 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <!-- Reemplaza '/ruta-a-tu-imagen4.jpg' con la ruta real de tu imagen -->
+                    <img src="/api/placeholder/150/150" alt="Producto 4">
+                </div>
+                <h3>Producto 4</h3>
+                <p class="price">$299.99</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Acerca de Oteroz Company</h3>
+                <ul>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
